@@ -1,0 +1,320 @@
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* General */
+body {
+  font-family: "Lora", serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #5fac82;
+}
+.navbar-nav .nav-link {
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+.navbar-nav .nav-link:hover {
+  color: #b2d8c3;
+}
+.navbar-nav .nav-link:hover {
+  background-color: #0d2e1c; /* Warna latar belakang saat hover */
+  color: #0d2e1c; /* Warna teks saat hover, sesuaikan dengan kebutuhan */
+  border-radius: 0.25rem; /* Tambahkan radius border agar tampilan hover lebih halus */
+}
+/* Navbar untuk link yang sedang aktif */
+.navbar-nav .nav-link.active {
+  background-color: #0d2e1c; /* Hijau gelap */
+  color: #ffffff; /* Warna teks putih */
+  font-weight: bold; /* Menebalkan teks */
+  border-radius: 0.25rem; /* Radius border agar tampilan lebih halus */
+}
+
+/* Jumbotron */
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #b2d8c3;
+  font-family: "Merienda", cursive; /* Menetapkan font untuk jumbotron */
+}
+
+/* Tag H2 */
+h2 {
+  font-family: "Merienda", cursive; /* Menetapkan font untuk semua tag H2 */
+  border: 2px solid #5fac82; /* Warna border */
+  border-radius: 10px; /* Membuat sudut border membulat */
+  padding: 10px 15px; /* Ruang di dalam border */
+  background-color: #ffffff; /* Warna latar belakang di dalam border */
+  display: inline-block; /* Agar border hanya mengelilingi teks */
+  margin: 0; /* Menghilangkan margin default */
+  font-family: "Merienda", cursive; /* Menggunakan font Merienda */
+  margin-bottom: 1rem;
+}
+
+/* Sections */
+section {
+  padding-top: 6rem;
+}
+
+/* About */
+.about-box {
+  background: white;
+  border-radius: 10px;
+  transition: transform 0.5s, box-shadow 0.3s;
+}
+
+.about-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bg-light {
+  background-color: #ffffff !important;
+}
+
+/* Styling for About Section Paragraphs */
+.about-box {
+  position: relative; /* Ensure that 'read-more' is positioned relative to this box */
+}
+
+.about-box i {
+  color: #0d2e1c;
+}
+
+.about-box p {
+  text-align: justify;
+  text-justify: inter-word;
+  overflow: hidden;
+  max-height: 6rem; /* Adjust based on your content */
+  margin-bottom: 1rem;
+}
+
+.about-box p.expanded {
+  max-height: none; /* Show full text */
+}
+
+.read-more {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #ffffff;
+  color: #5fac82;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.5rem;
+  text-align: center;
+  z-index: 10; /* Ensure it is clickable */
+}
+
+/* Gallery */
+#gallery {
+  background-color: #b2d8c3;
+}
+
+#gallery .card {
+  height: 100%; /* Atur tinggi card agar konsisten */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+}
+
+#gallery .card:hover {
+  transform: scale(1.05);
+}
+
+#gallery .card img,
+#gallery .card video {
+  width: 100%; /* Mengisi lebar card */
+  height: 250px; /* Menyediakan tinggi tetap */
+  object-fit: cover; /* Menjaga proporsi dan mengisi area */
+}
+
+#gallery .card-body {
+  flex-grow: 1; /* Memastikan body card selalu berada di bawah */
+}
+
+/* Card dengan border dan shadow */
+.card {
+  border: 2px solid #5fac82;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+/* Swiper CSS */
+.swiper-container {
+  width: 100%;
+  height: 250px; /* Sesuaikan dengan tinggi yang diinginkan */
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff !important; /* Warna tombol navigasi putih dengan !important */
+  font-size: 18px !important; /* Ukuran font untuk memperkecil tombol */
+  padding: 5px 10px !important; /* Padding untuk memperkecil tombol */
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px !important; /* Ukuran font untuk memperkecil ikon */
+}
+
+.swiper-pagination-bullet {
+  background: #0d2e1c !important; /* Warna bullet pagination putih dengan !important */
+}
+
+/* Section CV */
+#cv {
+  background-color: #ffffff;
+}
+
+.cv-header {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.cv-content {
+  max-width: 80%;
+  font-size: 1.2rem;
+  position: relative; /* For pseudo-elements */
+  padding: 20px; /* Add padding to ensure content doesn't touch the border */
+  border: 5px solid transparent; /* For border effect */
+  border-radius: 15px; /* Rounded corners */
+  background: linear-gradient(white, white) padding-box, linear-gradient(45deg, #5fac82, #b2d8c3) border-box; /* Gradient border */
+}
+
+.cv-content img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 5px; /* Optional: Rounded corners for the image */
+}
+
+.cv-download-btn {
+  margin-top: 50px;
+}
+
+/* Optional: Add some shadow to make it stand out */
+.cv-content {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+/* Form Styling */
+#contact {
+  background-color: #b2d8c3;
+}
+#contact form .form-control {
+  border-radius: 0.25rem;
+  border: 1px solid #5fac82;
+}
+#contact form .form-control:focus {
+  border-color: #5fac82;
+  box-shadow: 0 0 5px rgba(95, 172, 130, 0.5);
+}
+#contact form .btn-primary {
+  background-color: #5fac82;
+  border-color: #5fac82;
+  transition: background-color 0.3s ease-in-out;
+}
+#contact form .btn-primary:hover {
+  background-color: #459d69;
+}
+
+/* Social Media Toggle Button */
+.social-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+}
+
+#toggle {
+  display: none;
+}
+
+.toggle-btn {
+  background-color: #0d2e1c;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+#toggle:checked ~ .social-links {
+  opacity: 1;
+  visibility: visible;
+}
+
+.social-link {
+  background-color: white;
+  color: #5fac82;
+  font-size: 24px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.social-link.instagram {
+  background-color: #f196a7;
+  color: white;
+}
+
+.social-link.shopee {
+  background-color: orangered;
+  color: white;
+}
+
+.social-link.tiktok {
+  background-color: #1c1d1d;
+  color: white;
+}
+
+.social-link.github {
+  background-color: #333;
+  color: white;
+}
+
+/* Footer */
+#footer {
+  background-color: #5fac82;
+}
